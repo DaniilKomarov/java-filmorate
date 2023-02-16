@@ -10,7 +10,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserControllerTest {
     @Test
     void validateUserTest(){
-        final User user = new User("dan@kom","dankom");
+        final User user = new User();
+        user.setEmail("23sa");
+        user.setLogin("ghdoe");
         user.setName("232");
         user.setBirthday(LocalDate.of(2030,12,2));
         ValidationException exception = assertThrows(ValidationException.class, () -> UserController.validateUser(user));
